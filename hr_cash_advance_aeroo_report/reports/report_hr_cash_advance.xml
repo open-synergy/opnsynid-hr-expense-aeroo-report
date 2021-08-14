@@ -1,0 +1,146 @@
+<?xml version="1.0" ?>
+<!-- Copyright 2021 OpenSynergy Indonesia
+     Copyright 2021 PT. Simetri Sinergi Indonesia
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html). -->
+<openerp>
+<data noupdate="1">
+    <!-- Aeroo Report -->
+    <!-- HT Cash Aadvance No Header -->
+    <record id="report_hr_cash_advance_no_header_a4_pdf" model="ir.actions.report.xml">
+        <field name="name">Employee Cash Advance No Header A4 PDF</field>
+        <field name="type">ir.actions.report.xml</field>
+        <field name="model">hr.cash_advance</field>
+        <field name="report_name">report_hr_cash_advance_no_header_a4_pdf</field>
+        <field name="report_type">aeroo</field>
+        <field name="in_format">oo-odt</field>
+        <field name="out_format" ref="report_aeroo.report_mimetypes_pdf_ods" />
+        <field
+                name="parser_loc"
+            >hr_cash_advance_aeroo_report/reports/parser_hr_cash_advance.py</field>
+        <field
+                name="report_rml"
+            >hr_cash_advance_aeroo_report/reports/hr_cash_advance_nh_a4.odt</field>
+        <field name="parser_state">loc</field>
+        <field name="tml_source">file</field>
+    </record>
+    <!-- HT Cash Aadvance With Header -->
+    <record
+            id="report_hr_cash_advance_with_header_a4_pdf"
+            model="ir.actions.report.xml"
+        >
+        <field name="name">Employee Cash Advance Header A4 PDF</field>
+        <field name="type">ir.actions.report.xml</field>
+        <field name="model">hr.cash_advance</field>
+        <field name="report_name">report_hr_cash_advance_with_header_a4_pdf</field>
+        <field name="report_type">aeroo</field>
+        <field name="in_format">oo-odt</field>
+        <field name="out_format" ref="report_aeroo.report_mimetypes_pdf_ods" />
+        <field
+                name="parser_loc"
+            >hr_cash_advance_aeroo_report/reports/parser_hr_cash_advance.py</field>
+        <field
+                name="report_rml"
+            >hr_cash_advance_aeroo_report/reports/hr_cash_advance_wh_a4.odt</field>
+        <field name="parser_state">loc</field>
+        <field name="tml_source">file</field>
+    </record>
+    <!-- HT Cash Aadvance Settlement No Header -->
+    <record
+            id="report_hr_cash_advance_settlement_no_header_a4_pdf"
+            model="ir.actions.report.xml"
+        >
+        <field name="name">Employee Cash Advance Settlement No Header A4 PDF</field>
+        <field name="type">ir.actions.report.xml</field>
+        <field name="model">hr.cash_advance_settlement</field>
+        <field
+                name="report_name"
+            >report_hr_cash_advance_settlement_no_header_a4_pdf</field>
+        <field name="report_type">aeroo</field>
+        <field name="in_format">oo-odt</field>
+        <field name="out_format" ref="report_aeroo.report_mimetypes_pdf_ods" />
+        <field
+                name="parser_loc"
+            >hr_cash_advance_aeroo_report/reports/parser_hr_cash_advance.py</field>
+        <field
+                name="report_rml"
+            >hr_cash_advance_aeroo_report/reports/hr_cash_advance_settlement_nh_a4.odt</field>
+        <field name="parser_state">loc</field>
+        <field name="tml_source">file</field>
+    </record>
+    <!-- HT Cash Aadvance Settlement With Header -->
+    <record
+            id="report_hr_cash_advance_settlement_with_header_a4_pdf"
+            model="ir.actions.report.xml"
+        >
+        <field name="name">Employee Cash Advance Settlement Header A4 PDF</field>
+        <field name="type">ir.actions.report.xml</field>
+        <field name="model">hr.cash_advance_settlement</field>
+        <field
+                name="report_name"
+            >report_hr_cash_advance_settlement_with_header_a4_pdf</field>
+        <field name="report_type">aeroo</field>
+        <field name="in_format">oo-odt</field>
+        <field name="out_format" ref="report_aeroo.report_mimetypes_pdf_ods" />
+        <field
+                name="parser_loc"
+            >hr_cash_advance_aeroo_report/reports/parser_hr_cash_advance.py</field>
+        <field
+                name="report_rml"
+            >hr_cash_advance_aeroo_report/reports/hr_cash_advance_settlement_wh_a4.odt</field>
+        <field name="parser_state">loc</field>
+        <field name="tml_source">file</field>
+    </record>
+
+    <!-- Print Policy -->
+    <!-- HT Cash Aadvance No Header -->
+    <record
+            id="print_policy_hr_cash_advance_no_header_a4_pdf"
+            model="base.print.policy"
+        >
+        <field name="name">Employee Cash Advance No Header A4 PDF</field>
+        <field name="report_action_id" ref="report_hr_cash_advance_no_header_a4_pdf" />
+        <field name="active">True</field>
+        <field name="python_condition">result = True</field>
+    </record>
+    <!-- HT Cash Aadvance With Header -->
+    <record
+            id="print_policy_hr_cash_advance_with_header_a4_pdf"
+            model="base.print.policy"
+        >
+        <field name="name">Employee Cash Advance Header A4 PDF</field>
+        <field
+                name="report_action_id"
+                ref="report_hr_cash_advance_with_header_a4_pdf"
+            />
+        <field name="active">True</field>
+        <field name="python_condition">result = True</field>
+    </record>
+    <!-- HT Cash Aadvance Settlement No Header -->
+    <record
+            id="print_policy_hr_cash_advance_settlement_no_header_a4_odt_pdf"
+            model="base.print.policy"
+        >
+        <field name="name">Employee Cash Advance Settlement No Header A4 PDF</field>
+        <field
+                name="report_action_id"
+                ref="report_hr_cash_advance_settlement_no_header_a4_pdf"
+            />
+        <field name="active">True</field>
+        <field name="python_condition">result = True</field>
+    </record>
+    <!-- HT Cash Aadvance Settlement With Header -->
+    <record
+            id="print_policy_hr_cash_advance_settlement_with_header_a4_pdf"
+            model="base.print.policy"
+        >
+        <field name="name">Employee Cash Advance Settlement Header A4 PDF</field>
+        <field
+                name="report_action_id"
+                ref="report_hr_cash_advance_settlement_with_header_a4_pdf"
+            />
+        <field name="active">True</field>
+        <field name="python_condition">result = True</field>
+    </record>
+
+</data>
+</openerp>
