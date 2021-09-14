@@ -6,10 +6,7 @@
 <data noupdate="1">
     <!-- Aeroo Report -->
     <!-- HR Reimbursement No Header -->
-    <record
-            id="report_hr_reimbursement_no_header_a4_pdf"
-            model="ir.actions.report.xml"
-        >
+    <record id="report_hr_reimbursement_no_header_a4_pdf" model="ir.actions.report.xml">
         <field name="name">Employee Reimbursement No Header A4 PDF</field>
         <field name="type">ir.actions.report.xml</field>
         <field name="model">hr.reimbursement</field>
@@ -55,10 +52,7 @@
             model="base.print.policy"
         >
         <field name="name">Employee Reimbursement No Header A4 PDF</field>
-        <field
-                name="report_action_id"
-                ref="report_hr_reimbursement_no_header_a4_pdf"
-            />
+        <field name="report_action_id" ref="report_hr_reimbursement_no_header_a4_pdf" />
         <field name="active">True</field>
         <field name="python_condition">result = True</field>
     </record>
