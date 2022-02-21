@@ -1,9 +1,15 @@
+# -*- coding: utf-8 -*-
+# Copyright 2022 PT. Simetri Sinergi Indonesia
+# Copyright 2022 OpenSynergy Indonesia
+# License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
+# pylint: disable=R8110
+
 from datetime import datetime
 
 from openerp.report import report_sxw
 
 
-class Parser(report_sxw.rml_parse):
+class Parser(report_sxw.rml_parse):  # pylint: disable=R8110
     def __init__(self, cr, uid, name, context):
         super(Parser, self).__init__(cr, uid, name, context)
         self.context = context
